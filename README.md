@@ -17,5 +17,5 @@ ParkMe is an android application, targeting people who are struggling to find fr
 
 ### Won't have
 •	See other cars
-•	any fixes if the cars are parked wrong (not in the lines)
-•	any needed information about the car (plates, type of car)
+•	Any fixes if the cars are parked wrong (not in the lines)
+•	Any needed information about the car (plates, type of car)
