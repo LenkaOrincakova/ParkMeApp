@@ -3,8 +3,11 @@ ParkMe is an android application, targeting people who are struggling to find fr
 ## MoSCoW requirements
 ### Must have
 •	Register new account with car
+
 •	Login user
+
 •	Search/adjust location 
+
 •	Filter paid/free parking places
 ### Should have
 •	Price if the parking place is paid
