@@ -11,14 +11,18 @@ ParkMe is an android application, targeting people who are struggling to find fr
 •	Filter paid/free parking places
 ### Should have
 •	Price if the parking place is paid
+
 •	Possibility to park more cars (if owing)
 
 ### Could have
 •	Pin my car to a parking spot
+
 •	Subscription if registered user(discounts, memberships, cards)
+
 •	Save the parking place as a favourite
 
 ### Won't have
 •	See other cars
 •	Any fixes if the cars are parked wrong (not in the lines)
+
 •	Any needed information about the car (plates, type of car)
