@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
+
+
     <TextView
         android:id="@+id/text_home"
         android:layout_width="match_parent"
@@ -20,26 +22,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!--    <fragment-->
-    <!--        android:id="@+id/google_maps"-->
-    <!--        android:name="com.google.android.gms.maps.SupportMapFragment"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="413dp"-->
-    <!--        app:layout_constraintBottom_toTopOf="@+id/imageView"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintHorizontal_bias="1.0"-->
-    <!--        app:layout_constraintStart_toStartOf="parent" />-->
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="419dp"
-        android:layout_height="520dp"
-        android:layout_marginTop="212dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/nav_host_fragment"
-        app:srcCompat="@drawable/car" />
+
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView"-->
+<!--        android:layout_width="419dp"-->
+<!--        android:layout_height="520dp"-->
+<!--        android:layout_marginTop="212dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/nav_host_fragment"-->
+<!--        app:srcCompat="@drawable/car" />-->
 
     <SearchView
         android:id="@+id/searchView"
@@ -54,6 +49,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/google_map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"/>
 
     <!--    <ListView-->
     <!--        android:id="@+id/listView"-->

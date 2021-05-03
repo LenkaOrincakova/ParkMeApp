@@ -1,6 +1,9 @@
 package com.example.parkme;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.Location;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.SearchView;
@@ -8,12 +11,23 @@ import android.widget.Toast;
 
 import com.example.parkme.ui.search.Search;
 
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -27,8 +41,10 @@ public class homeActivity extends AppCompatActivity
 {
 
 
-//    GoogleMap map;
+    //    GoogleMap map;
 //    SupportMapFragment mapFragment;
+//    FusedLocationProviderClient client;
+
     SearchView searchView;
     ActionBarDrawerToggle toggle;
     DrawerLayout drawerLayout;
@@ -50,7 +66,7 @@ public class homeActivity extends AppCompatActivity
 
         navigationView = findViewById(R.id.navigationView);
         drawerLayout = findViewById(R.id.drawer_layout);
-        toggle= new ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close);
+        toggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close);
 
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
@@ -66,8 +82,7 @@ public class homeActivity extends AppCompatActivity
         searchView = findViewById(R.id.searchView);
         navigationView.setNavigationItemSelectedListener((item) ->
         {
-            switch (item.getItemId())
-            {
+            switch (item.getItemId()) {
                 case R.id.nav_search:
                     Intent intent = new Intent(homeActivity.this, Search.class);
                     startActivity(intent);
@@ -76,75 +91,18 @@ public class homeActivity extends AppCompatActivity
             }
             return true;
         });
+        //google maps
+//
     }
 
     @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if(toggle.onOptionsItemSelected(item)){
+        public boolean onOptionsItemSelected (@NonNull MenuItem item){
+            if (toggle.onOptionsItemSelected(item)) {
+                return true;
+            }
             return true;
-        }
-        return true;
+
 
 
     }
-
-//    @Override
-//    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-//        switch (item.getItemId()){
-//            case R.id.nav_search:
-//                Toast.makeText(this, "Home", Toast.LENGTH_SHORT).show();
-//                break;
-//            case R.id.MyCars:
-//                Toast.makeText(this, "Gallery", Toast.LENGTH_SHORT).show();
-//                break;
-//            case R.id.subscription:
-//                Toast.makeText(this, "slideshow", Toast.LENGTH_SHORT).show();
-//                break;
-//            case R.id.payment:
-//                Toast.makeText(this, "payment", Toast.LENGTH_SHORT).show();
-//                break;
-//        }
-//
-//        return true;
-//    }
 }
-
-//        mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.google_maps);
-//        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-//            @Override
-//            public boolean onQueryTextSubmit(String query) {
-//                String location = searchView.getQuery().toString();
-//                List<Address> addressList = null;
-//                if(location!= null || !location.equals(""))
-//                {
-//                    Geocoder geocoder = new Geocoder(homeActivity.this);
-//                    try {
-//                        addressList = geocoder.getFromLocationName(location, 1);
-//                    }
-//                    catch (IOException e) {
-//                        e.printStackTrace();
-//                    }
-//                    Address address = addressList.get(0);
-//                    LatLng latLng = new LatLng(address.getLatitude(), address.getLongitude());
-//                    map.addMarker(new MarkerOptions().position(latLng).title(location));
-//                    map.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 10));
-//                }
-//                return false;
-//            }
-//
-//            @Override
-//            public boolean onQueryTextChange(String newText) {
-//                return false;
-//            }
-//        });
-//        mapFragment.getMapAsync(this);
-//
-//    }
-//
-//    @Override
-//    public void onMapReady(GoogleMap googleMap) {
-//
-//        map = googleMap;
-//
-//    }
-//}
