@@ -13,7 +13,6 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.parkme.R;
-import com.example.parkme.ui.settings.SettingsViewModel;
 
 public class FavouritesFragment extends Fragment {
 

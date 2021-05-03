@@ -52,6 +52,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.parkme.R;
+import com.example.parkme.ui.home.HomeViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -60,9 +61,9 @@ public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
     SearchView searchView;
-    ListView listView;
-//    List<City> cities;
-//    MyAdapter adapter;
+//    ListView listView;
+////    List<City> cities;
+////    MyAdapter adapter;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {

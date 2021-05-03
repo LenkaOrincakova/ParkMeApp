@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:showIn="navigation_view">
+    xmlns:tools="http://schemas.android.com/tools">
+<!--    tools:showIn="navigation_view">-->
 
-    <group android:checkableBehavior="single">
+<!--    <group android:checkableBehavior="single">-->
         <item
-            android:id="@+id/nav_home"
+            android:id="@+id/nav_search"
             android:icon="@drawable/ic_menu_camera"
-            android:title="@string/menu_home" />
+            android:title="@string/search" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:id="@+id/MyCars"
+            android:icon="@drawable/ic_baseline_directions_car_24"
+            android:title="@string/MyCars" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
-    </group>
+            android:id="@+id/subscription"
+            android:icon="@drawable/ic_baseline_subscriptions_24"
+            android:title="@string/subscription" />
+        <item
+            android:id="@+id/payment"
+            android:icon="@drawable/ic_baseline_payment_24"
+            android:title="@string/payment" />
+<!--    </group>-->
 </menu>
