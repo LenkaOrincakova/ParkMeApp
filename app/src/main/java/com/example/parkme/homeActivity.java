@@ -5,10 +5,16 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.MenuItem;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 import android.widget.SearchView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.parkme.ui.home.HomeFragment;
 import com.example.parkme.ui.search.Search;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
@@ -41,9 +47,6 @@ public class homeActivity extends AppCompatActivity
 {
 
 
-    //    GoogleMap map;
-//    SupportMapFragment mapFragment;
-//    FusedLocationProviderClient client;
 
     SearchView searchView;
     ActionBarDrawerToggle toggle;
@@ -54,7 +57,7 @@ public class homeActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
@@ -76,7 +79,6 @@ public class homeActivity extends AppCompatActivity
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
 
         searchView = findViewById(R.id.searchView);

@@ -28,8 +28,11 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBoQYjhAvUYoOQbady-eRfTkXdR0WQ0Nxg" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".homeActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,6 +40,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.search.Search"/>
+        <activity android:name=".homeActivity"/>
     </application>
 
 </manifest>

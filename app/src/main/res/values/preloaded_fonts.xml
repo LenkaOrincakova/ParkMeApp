@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/actor</item>
+        <item>@font/annie_use_your_telescope</item>
+        <item>@font/cambay_bold</item>
+        <item>@font/delius</item>
+        <item>@font/oxygen_bold</item>
+        <item>@font/quicksand</item>
+        <item>@font/quicksand_bold</item>
+        <item>@font/quicksand_medium</item>
+        <item>@font/spinnaker</item>
+        <item>@font/ubuntu_light</item>
+        <item>@font/ubuntu_medium</item>
+    </array>
+</resources>
