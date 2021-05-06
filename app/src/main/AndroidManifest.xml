@@ -40,6 +40,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.search.Search"/>
+        <activity android:name=".ui.cars.MyCarsActivity"/>
         <activity android:name=".homeActivity"/>
     </application>
 

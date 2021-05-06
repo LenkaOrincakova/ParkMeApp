@@ -29,15 +29,19 @@ public class ParkingSpotRepository {
 
     }
 
+
     public LiveData<List<ParkingSpot>> getParkingSpot()
     {
         return parkingSpotMutableLiveData;
+
     }
+
 
     public void setParkingSpot()
     {
         ParkMeApi parkMeApi = ServiceGenerator.getParkMeApi();
         Call<List<ParkingSpotResponse>> call = parkMeApi.getAllParkingSpots();
+
         call.enqueue(new Callback<List<ParkingSpotResponse>>()
         {
             @EverythingIsNonNull
@@ -52,8 +56,12 @@ public class ParkingSpotRepository {
                         parkingSpots.add(parkingSpotResponse.getParkingSpot());
                     }
                     parkingSpotMutableLiveData.setValue(parkingSpots);
+                    System.out.println("this: " + parkMeApi.getAllParkingSpots());
+
+//                    System.out.println(parkingSpots + "response: " + response);
                 }
             }
+
             @EverythingIsNonNull
             @Override
             public void onFailure(Call<List<ParkingSpotResponse>> call, Throwable t) {

@@ -2,13 +2,15 @@ package com.example.parkme.webservices;
 
 public class ParkingSpot {
 
-    private int parkingSpotId;
-    private City cityEnum;
+    private int id;
+    private String placering;
+    private int antal;
 
-    public ParkingSpot(int parkingSpotId, City cityEnum)
+    public ParkingSpot(int id, String placering, int antal)
     {
-        this.parkingSpotId = parkingSpotId;
-        this.cityEnum = cityEnum;
+        this.id = id;
+        this.placering = placering;
+        this.antal = antal;
     }
 
     public ParkingSpot()
@@ -16,22 +18,29 @@ public class ParkingSpot {
 
     }
 
-    public int getParkingSpotId()
+    public int getId()
     {
-        return parkingSpotId;
-    }
-    public City getCityEnum()
-    {
-        return cityEnum;
+        return id;
     }
 
-    public void setParkingSpotId(int parkingSpotId)
-    {
-        this.parkingSpotId = parkingSpotId;
+    public int getAntal() {
+        return antal;
     }
 
-    public void setCityEnum(City cityEnum)
+    public String getPlacering() {
+        return placering;
+    }
+
+    public void setId(int id)
     {
-        this.cityEnum = cityEnum;
+        this.id = id;
+    }
+
+    public void setAntal(int antal) {
+        this.antal = antal;
+    }
+
+    public void setPlacering(String placering) {
+        this.placering = placering;
     }
 }

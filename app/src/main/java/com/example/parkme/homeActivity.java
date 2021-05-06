@@ -14,6 +14,7 @@ import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.parkme.ui.cars.MyCarsActivity;
 import com.example.parkme.ui.home.HomeFragment;
 import com.example.parkme.ui.search.Search;
 
@@ -88,6 +89,10 @@ public class homeActivity extends AppCompatActivity
                 case R.id.nav_search:
                     Intent intent = new Intent(homeActivity.this, Search.class);
                     startActivity(intent);
+                    break;
+                case R.id.MyCars:
+                    Intent intent2 = new Intent(homeActivity.this, MyCarsActivity.class);
+                    startActivity(intent2);
                     break;
 
             }
