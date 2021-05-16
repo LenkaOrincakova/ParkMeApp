@@ -28,4 +28,4 @@ Searching for a parking spot is usually a huge issue especially in the centres a
 
 •	Any fixes if the cars are parked wrong (not in the lines)
 
-•	Any needed information about the car (plates, type of car)
+•	Any needed information about the car (plates)
