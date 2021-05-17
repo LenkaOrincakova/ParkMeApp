@@ -10,18 +10,19 @@ Searching for a parking spot is usually a huge issue especially in the centres a
 
 •	Search/adjust location 
 
-•	Filter paid/free parking places
-### Should have
-•	Price if the parking place is paid
+• Price if the parking place is paid
 
 •	Possibility to park more cars (if owing)
+### Should have
+•		Filter paid/free parking places
+•   Save the parking place as a favourite
 
 ### Could have
 •	Pin my car to a parking spot
 
 •	Subscription if registered user(discounts, memberships, cards)
 
-•	Save the parking place as a favourite
+
 
 ### Won't have
 •	See other cars
