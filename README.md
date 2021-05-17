@@ -15,6 +15,7 @@ Searching for a parking spot is usually a huge issue especially in the centres a
 •	Possibility to park more cars (if owing)
 ### Should have
 •		Filter paid/free parking places
+
 •   Save the parking place as a favourite
 
 ### Could have
