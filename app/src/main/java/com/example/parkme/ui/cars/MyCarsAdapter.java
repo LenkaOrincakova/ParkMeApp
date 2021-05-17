@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,136 +15,68 @@ import com.example.parkme.model.Car;
 
 import java.util.ArrayList;
 
-//
-//import android.content.Context;
-//import android.view.LayoutInflater;
-//import android.view.View;
-//import android.view.ViewGroup;
-//import android.widget.BaseAdapter;
-//import android.widget.Filter;
-//import android.widget.Filterable;
-//
-//import java.util.ArrayList;
-//import java.util.List;
-//
-public class MyCarsAdapter extends RecyclerView.Adapter<MyCarsAdapter.CarHolder> {
-    private Context context;
-    private ArrayList<Car> cars;
+
+public class MyCarsAdapter extends RecyclerView.Adapter<MyCarsAdapter.CarViewHolder> {
+
+    private ArrayList<Car> carsList;
+    final private OnListItemClickListener listener;
+
+    class CarViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+
+       public TextView textCarName, textCarType;
+       public Button removeButton;
+       public CarViewHolder(@NonNull View itemView) {
+            super(itemView);
+            removeButton = itemView.findViewById(R.id.removeBtn);
+            textCarName = itemView.findViewById(R.id.textCarName);
+            textCarType = itemView.findViewById(R.id.textCarType);
+        }
+
+        @Override
+        public void onClick(View v) {
+            listener.onListItemClick(getAdapterPosition());
+            listener.deleteCar(carsList.get(getAdapterPosition()), getAdapterPosition());
+                    }
+    }
 
 
     //Constructor
-    public MyCarsAdapter(Context context, ArrayList<Car> cars)
+    public MyCarsAdapter(ArrayList<Car> cars, OnListItemClickListener listener)
     {
-        this.context = context;
-        this.cars = cars;
+        this.listener = listener;
+        this.carsList = cars;
     }
-
-
     @NonNull
     @Override
-    public MyCarsAdapter.CarHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.row_items, parent, false);
-        return new CarHolder(view);
+    public CarViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_items, parent, false);
+        CarViewHolder evh = new CarViewHolder(view);
+        return evh;
+//        return new CarHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyCarsAdapter.CarHolder holder, int position) {
-        Car car = cars.get(position);
-        holder.setDetails(car);
+    public void onBindViewHolder(@NonNull CarViewHolder holder, int position) {
+
+        Car currentCar = carsList.get(position);
+        holder.textCarName.setText(currentCar.getName());
+        holder.textCarType.setText(currentCar.getType());
+        holder.removeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listener.deleteCar(carsList.get(position), position);
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
-        return cars.size();
+        return carsList.size();
     }
 
+    public interface OnListItemClickListener{
+        void onListItemClick(int clickedItemIndex);
+        void deleteCar(Car car, int position);
 
-    //View Holder
-    class CarHolder extends RecyclerView.ViewHolder{
-    private TextView textCarName, textCarType;
-
-
-
-
-
-    CarHolder(View itemView){
-        super(itemView);
-        textCarName = itemView.findViewById(R.id.textCarName);
-        textCarType = itemView.findViewById(R.id.textCarType);
     }
-    void setDetails(Car car)
-    {
-        textCarName.setText(car.getName());
-        textCarType.setText(car.getType());
-    }
-
 }
-
-
-}
-//
-//
-//
-//
-//
-//    @Override
-//    public Object getItem(int position) {
-//        return cities.get(position);
-//    }
-//
-//    @Override
-//    public long getItemId(int position) {
-//        return position;
-//    }
-//
-//    @Override
-//    public View getView(int position, View convertView, ViewGroup parent) {
-//       if(inflater == null)
-//       {
-//           inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-//       }
-//
-//        return null;
-//    }
-//
-//    @Override
-//    public Filter getFilter() {
-//      if(valueFilter == null)
-//      {
-//          valueFilter = new ValueFilter();
-//      }
-//        return null;
-//    }
-//
-//    private class ValueFilter extends Filter {
-//        @Override
-//        protected FilterResults performFiltering(CharSequence constraint) {
-//
-//            FilterResults results = new FilterResults();
-//            if(constraint != null && constraint.length()>0)
-//            {
-//                ArrayList<City> filterList = new ArrayList<City>();
-//                for (int i = 0; i < mValue.size() ; i++) {
-//                    if((mValue.get(i).getName().toUpperCase()).contains(constraint.toString().toUpperCase())) {
-//                        City city = new City(mValue.get(i).getName());
-//                        filterList.add(city);
-//                    }
-//
-//                }
-//                results.count = filterList.size();
-//                results.values = filterList;
-//            }
-//            else {
-//                results.count = mValue.size();
-//                results.values = mValue;
-//            }
-//        return results;
-//        }
-//
-//        @Override
-//        protected void publishResults(CharSequence constraint, FilterResults results) {
-//            cities =(ArrayList<City>) results.values;
-//            notifyDataSetChanged();
-//        }
-//    }
-//}

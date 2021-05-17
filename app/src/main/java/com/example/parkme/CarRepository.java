@@ -32,6 +32,7 @@ public class CarRepository {
         return instance;
     }
 
+
     public LiveData<List<Car>> getAllCars()
     {
         return allCars;
@@ -40,7 +41,7 @@ public class CarRepository {
     {
        executorService.execute(() -> carDAO.insert(car));
     }
-    public void delete(Car car)
+    public void deleteCar(Car car)
     {
         executorService.execute(() -> carDAO.delete(car));
     }

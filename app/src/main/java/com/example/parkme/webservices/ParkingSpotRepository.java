@@ -1,6 +1,7 @@
 package com.example.parkme.webservices;
 
 
+import android.app.Application;
 import android.util.Log;
 
 import retrofit2.Call;
@@ -18,26 +19,27 @@ public class ParkingSpotRepository {
     private static ParkingSpotRepository instance;
     private final MutableLiveData<List<ParkingSpot>> parkingSpotMutableLiveData;
 
-    private ParkingSpotRepository() {
+    private ParkingSpotRepository(Application application) {
         parkingSpotMutableLiveData = new MutableLiveData<>();
     }
 
-    public static synchronized ParkingSpotRepository getInstance() {
-        if (instance == null)
-            instance = new ParkingSpotRepository();
+    public static synchronized ParkingSpotRepository getInstance(Application application) {
+        if (instance == null) {
+            instance = new ParkingSpotRepository(application);
+        }
             return instance;
 
     }
 
 
-    public LiveData<List<ParkingSpot>> getParkingSpot()
+    public LiveData<List<ParkingSpot>> getParkingSpotsMutableLiveData()
     {
         return parkingSpotMutableLiveData;
 
     }
 
 
-    public void setParkingSpot()
+    public void setParkingSpotsMutableLiveData()
     {
         ParkMeApi parkMeApi = ServiceGenerator.getParkMeApi();
         Call<List<ParkingSpotResponse>> call = parkMeApi.getAllParkingSpots();
@@ -47,20 +49,21 @@ public class ParkingSpotRepository {
             @EverythingIsNonNull
             @Override
             public void onResponse(Call<List<ParkingSpotResponse>> call, Response<List<ParkingSpotResponse>> response) {
-                if(response.isSuccessful())
+
+                ArrayList<ParkingSpotResponse> parkingSpotResponses = new ArrayList<>(response.body());
+                ArrayList<ParkingSpot> parkingSpots = new ArrayList<>();
+                for(ParkingSpotResponse parkingSpotResponse : parkingSpotResponses)
                 {
-                    List<ParkingSpotResponse> parkingSpotResponses = response.body();
-                    ArrayList<ParkingSpot> parkingSpots = new ArrayList<>();
-                    for(ParkingSpotResponse parkingSpotResponse : parkingSpotResponses)
-                    {
-                        parkingSpots.add(parkingSpotResponse.getParkingSpot());
-                    }
-                    parkingSpotMutableLiveData.setValue(parkingSpots);
-                    System.out.println("this: " + parkMeApi.getAllParkingSpots());
+                    parkingSpots.add(parkingSpotResponse.getParkingSpot());
+                }
+
+
+               parkingSpotMutableLiveData.setValue(parkingSpots);
+
 
 //                    System.out.println(parkingSpots + "response: " + response);
                 }
-            }
+
 
             @EverythingIsNonNull
             @Override

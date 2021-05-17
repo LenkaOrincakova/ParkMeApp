@@ -7,6 +7,6 @@ import retrofit2.http.GET;
 
 public interface ParkMeApi {
 
-    @GET("opendata/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=opendata:open_vej_p_registrering_view&outputFormat=json")
+    @GET("2b093aec-d2d2-4bad-af57-e6a939c89b2d")
     Call<List<ParkingSpotResponse>> getAllParkingSpots();
 }

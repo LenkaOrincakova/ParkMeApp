@@ -1,19 +1,38 @@
 package com.example.parkme.ui.profile;
 
+import android.app.Application;
+
+import androidx.annotation.NonNull;
+import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class ProfileViewModel extends ViewModel {
+import com.example.parkme.user.UserRepository;
+import com.firebase.ui.auth.data.model.User;
+import com.google.firebase.auth.FirebaseUser;
 
-    private MutableLiveData<String> mText;
+public class ProfileViewModel extends AndroidViewModel {
+    private final UserRepository userRepository;
+    private MutableLiveData<FirebaseUser> userData;
 
-    public ProfileViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is profile fragment");
+
+    public ProfileViewModel(@NonNull Application application) {
+        super(application);
+        userRepository = UserRepository.getInstance(application);
+        userData = userRepository.getUserData();
     }
 
-    public LiveData<String> getText() {
-        return mText;
+    public void login(String email, String password) {
+        userRepository.login(email, password);
     }
+    public MutableLiveData<FirebaseUser> getUserData() {
+        return userData;
+    }
+
+//    public LiveData<FirebaseUser> getCurrentUser()
+//    {
+//        return userRepository.getCurrentUser();
+//    }
+
 }

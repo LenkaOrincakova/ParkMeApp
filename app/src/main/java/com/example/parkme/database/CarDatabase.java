@@ -17,10 +17,12 @@ public abstract class CarDatabase extends RoomDatabase {
         if(instance==null)
         {
             instance = Room.databaseBuilder(context.getApplicationContext(), CarDatabase.class, "car_database")
+                    .allowMainThreadQueries()
                     .fallbackToDestructiveMigration().build();
         }
         return instance;
     }
+
 
 
 

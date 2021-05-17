@@ -12,8 +12,6 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.parkme.ui.search.Search;
-
 public class MainActivity extends AppCompatActivity {
 
     private static int SPLASH_SCREEN= 5000;

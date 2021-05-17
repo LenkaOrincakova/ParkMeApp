@@ -17,10 +17,31 @@
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile" />
 
+    <fragment
+        android:id="@+id/navigation_myCars"
+        android:name="com.example.parkme.ui.cars.MyCarsFragment"
+        android:label="@string/title_MyCars"
+        tools:layout="@layout/activity_mycars">
+        <action
+            android:id="@+id/navigateToCarsFragment"
+            app:destination="@id/fragmentAddMyCars"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+
+    </fragment>
 
     <fragment
-        android:id="@+id/navigation_favourites"
-        android:name="com.example.parkme.ui.favourites.FavouritesFragment"
-        android:label="@string/title_favourites"
-        tools:layout="@layout/fragment_favourites" />
+        android:id="@+id/fragmentAddMyCars"
+        android:name="com.example.parkme.AddingNewCarFragment"
+        android:label="Add a car"
+        tools:layout="@layout/fragment_adding_new_car" >
+        <action
+            android:id="@+id/action_addCarFragment_to_navigation_car"
+            app:destination="@id/navigation_myCars"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+
+
+
 </navigation>

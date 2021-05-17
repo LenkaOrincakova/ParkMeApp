@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:background="@color/white"
+    android:id="@+id/fragmentAddMyCars"
+    tools:context=".AddingNewCarFragment">
+
+    <TextView
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="Add new car"
+        android:textAlignment="center"
+        android:textColor="@color/blue"
+        android:textSize="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/addCarName"
+        android:layout_width="231dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="132dp"
+        android:background="@drawable/rounded_border"
+        android:drawableStart="@drawable/ic_baseline_label_24"
+        android:drawablePadding="16dp"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/addCarType"
+        android:layout_width="231dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rounded_border"
+        android:drawableStart="@drawable/ic_baseline_label_24"
+        android:drawablePadding="16dp"
+        android:hint="Type"
+        android:inputType="text"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addCarName" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="104dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/rounded_border"
+        android:clickable="true"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.768"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addCarType"
+        app:layout_constraintVertical_bias="0.75" />
+
+    <Button
+        android:id="@+id/cancelBtn"
+        android:layout_width="104dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="@color/grey"
+        android:radius="100dp"
+        android:width="3dp"
+        android:shape="rectangle"
+
+        android:clickable="true"
+        android:text="Cancel"
+        app:layout_constraintEnd_toStartOf="@+id/submit"
+        app:layout_constraintTop_toBottomOf="@+id/addCarType" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

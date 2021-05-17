@@ -6,9 +6,9 @@
         android:icon="@drawable/ic_home_black_24dp"
         android:title="@string/menu_home" />
     <item
-        android:id="@+id/navigation_favourites"
-        android:icon="@drawable/ic_baseline_favorite_24"
-        android:title="@string/title_favourites" />
+        android:id="@+id/navigation_myCars"
+        android:icon="@drawable/ic_baseline_directions_car_24"
+        android:title="My cars" />
 
 
     <item

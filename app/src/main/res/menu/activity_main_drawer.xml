@@ -4,14 +4,8 @@
 <!--    tools:showIn="navigation_view">-->
 
 <!--    <group android:checkableBehavior="single">-->
-        <item
-            android:id="@+id/nav_search"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="@string/search" />
-        <item
-            android:id="@+id/MyCars"
-            android:icon="@drawable/ic_baseline_directions_car_24"
-            android:title="@string/MyCars" />
+       
+
         <item
             android:id="@+id/subscription"
             android:icon="@drawable/ic_baseline_subscriptions_24"

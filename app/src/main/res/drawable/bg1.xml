@@ -3,7 +3,9 @@
 
 
     <gradient android:startColor="@color/grey"
-                android:endColor="@color/white">
+                android:gradientRadius="@dimen/cardview_default_radius"
+
+                android:endColor="@color/grey">
 
 
     </gradient>

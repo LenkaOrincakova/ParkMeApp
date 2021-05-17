@@ -5,25 +5,21 @@ import java.util.List;
 
 public class ParkingSpotResponse {
 
-    private Properties properties;
+    private int id;
+    private String placering;
+    private int antal;
+    private String paid;
+    private String price;
+//    private Properties properties;
 //    private Properties placering;
 //    private Properties antal;
 
 
     public ParkingSpot getParkingSpot()
     {
-        return new ParkingSpot(properties.id, properties.placering, properties.antal);
+        return new ParkingSpot(id, placering, antal, paid, price);
     }
 
-//    public List<ParkingSpot> getParkingSpotList(City city)
-//    {
-//        return new ArrayList<ParkingSpot>();
-//    }
-    private class Properties {
-        private int id;
-        private String placering;
-        private int antal;
-}
 }
 
 
