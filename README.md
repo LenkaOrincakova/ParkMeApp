@@ -4,7 +4,7 @@ ParkMe is an android application, targeting people who are struggling to find fr
 Searching for a parking spot is usually a huge issue especially in the centres and sometimes it causes car accidents because drivers are in rush and they are trying to decide where to go. It's often time consuming and frustrating and this app should help every driver to avoid getting fines for parking :) 
 ## MoSCoW requirements
 ### Must have
-•	Register new account with car
+•	Register new account
 
 •	Login user
 
@@ -12,7 +12,9 @@ Searching for a parking spot is usually a huge issue especially in the centres a
 
 • Price if the parking place is paid
 
-•	Possibility to park more cars (if owing)
+•	Add cars to database
+
+•	See parking spots in Horsens
 ### Should have
 •		Filter paid/free parking places
 
