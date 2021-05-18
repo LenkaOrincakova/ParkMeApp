@@ -40,18 +40,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".homeActivity"/>
-<!--        <activity android:name=".SignInActivity">-->
-<!--           -->
-<!--        </activity>-->
-        <activity android:name=".ui.profile.RegisterActivity"
-            android:parentActivityName=".homeActivity"/>
-<!--            android:parentActivityName=".ProfileFragment"/>-->
-<!--        <meta-data-->
-<!--        android:name="android.support.PARENT_ACTIVITY"-->
-<!--        android:value=".ProfileFragment"/>-->
+        <activity android:name=".ui.home.HomeActivity"/>
+        <activity android:name=".ui.register_login.RegisterActivity"
+            android:parentActivityName=".ui.register_login.LoginActivity"/>
+        <activity android:name=".ui.register_login.LoginActivity"/>
         <activity android:name=".ui.parkingspot.ParkingSpotActivity"
-            android:parentActivityName=".homeActivity"/>
+            android:parentActivityName=".ui.home.HomeActivity"/>
 
     </application>
 

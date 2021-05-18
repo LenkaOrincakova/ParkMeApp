@@ -1,6 +1,5 @@
 package com.example.parkme;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -11,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.parkme.ui.register_login.LoginActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,15 +42,13 @@ public class MainActivity extends AppCompatActivity {
         slogan.setAnimation(bottomAnimation);
         subtitle.setAnimation(topAnimation);
 
-
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(MainActivity.this, homeActivity.class);
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(intent);
                 finish();
             }
         }, SPLASH_SCREEN);
     }
 }
-

@@ -6,17 +6,17 @@
     android:layout_height="400dp"
     android:background="@color/white"
     android:id="@+id/fragmentAddMyCars"
-    tools:context=".AddingNewCarFragment">
+    tools:context=".ui.addingCars.AddingNewCarFragment">
 
     <TextView
         android:layout_width="290dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:fontFamily="@font/quicksand_bold"
-        android:text="Add new car"
+        android:text="@string/add_new_car"
         android:textAlignment="center"
         android:textColor="@color/blue"
-        android:textSize="36dp"
+        android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,12 +30,13 @@
         android:background="@drawable/rounded_border"
         android:drawableStart="@drawable/ic_baseline_label_24"
         android:drawablePadding="16dp"
-        android:hint="Name"
+        android:hint="@string/name"
         android:inputType="textPersonName"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="@string/name" />
 
     <EditText
         android:id="@+id/addCarType"
@@ -45,12 +46,13 @@
         android:background="@drawable/rounded_border"
         android:drawableStart="@drawable/ic_baseline_label_24"
         android:drawablePadding="16dp"
-        android:hint="Type"
+        android:hint="@string/type"
         android:inputType="text"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addCarName" />
+        app:layout_constraintTop_toBottomOf="@+id/addCarName"
+        android:autofillHints="@string/type" />
 
     <Button
         android:id="@+id/submit"
@@ -60,13 +62,14 @@
         android:layout_marginBottom="30dp"
         android:background="@drawable/rounded_border"
         android:clickable="true"
-        android:text="Submit"
+        android:text="@string/submit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.768"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addCarType"
-        app:layout_constraintVertical_bias="0.75" />
+        app:layout_constraintVertical_bias="0.75"
+        android:focusable="true" />
 
     <Button
         android:id="@+id/cancelBtn"
@@ -78,10 +81,10 @@
         android:radius="100dp"
         android:width="3dp"
         android:shape="rectangle"
-
         android:clickable="true"
-        android:text="Cancel"
+        android:text="@string/cancel"
         app:layout_constraintEnd_toStartOf="@+id/submit"
-        app:layout_constraintTop_toBottomOf="@+id/addCarType" />
+        app:layout_constraintTop_toBottomOf="@+id/addCarType"
+        android:focusable="true" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

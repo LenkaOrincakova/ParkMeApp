@@ -4,10 +4,8 @@ import android.app.Application;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
-import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -54,7 +52,6 @@ public class UserRepository {
                     userData.postValue(firebaseAuth.getCurrentUser());
                     loggedOutData.postValue(false);
                     Toast.makeText(application.getApplicationContext(), "Succesfully Logged in", Toast.LENGTH_SHORT).show();
-
                 }
                 else
                 {
@@ -73,7 +70,8 @@ public class UserRepository {
                     user.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void aVoid) {
-                            Toast.makeText(application.getApplicationContext(), "Email has been sent to verify", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(application.getApplicationContext(), "Email has been sent to verify, you can now log in", Toast.LENGTH_SHORT).show();
+
                         }
                     }).addOnFailureListener(new OnFailureListener() {
                         @Override
@@ -81,13 +79,11 @@ public class UserRepository {
                             Toast.makeText(application.getApplicationContext(), "Error", Toast.LENGTH_SHORT).show();
                         }
                     });
-//                    Toast.makeText(application.getApplicationContext(), "User registered", Toast.LENGTH_SHORT).show();
                     loggedOutData.postValue(false);
                 }
                 else
                 {
                     Toast.makeText(application.getApplicationContext(), "User already registered", Toast.LENGTH_SHORT).show();
-
                 }
             }
         });

@@ -1,12 +1,8 @@
 package com.example.parkme.ui.parkingspot;
 
-import android.content.Context;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -14,8 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.parkme.R;
-import com.example.parkme.model.Car;
-import com.example.parkme.webservices.ParkingSpot;
+import com.example.parkme.model.ParkingSpot;
 
 import java.util.ArrayList;
 
@@ -36,16 +31,13 @@ public class ParkingSpotAdapter extends RecyclerView.Adapter<ParkingSpotAdapter.
             psAntal = itemView.findViewById(R.id.textNumberOfSpots);
             textPrice = itemView.findViewById(R.id.textPrice);
             textPaid = itemView.findViewById(R.id.textPaid);
-
         }
 
         @Override
         public void onClick(View v) {
             listener.onListItemClick(getAdapterPosition());
-
         }
     }
-
     public ParkingSpotAdapter(ArrayList<ParkingSpot> parkingSpots, OnListItemClickListener listener)
     {
         this.listener = listener;
@@ -56,36 +48,19 @@ public class ParkingSpotAdapter extends RecyclerView.Adapter<ParkingSpotAdapter.
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
          View view =inflater.inflate(R.layout.parking_spots_items, parent, false);
         return new ParkingSpotViewHolder(view);
-//
     }
-
 
     public void onBindViewHolder(@NonNull ParkingSpotViewHolder holder, int position) {
         holder.psPlacering.setText("Street: " + parkingSpots.get(position).getPlacering());
-//        ParkingSpot currentParkingSpot = parkingSpots.get(position);
-//        holder.psPlacering.setText(currentParkingSpot.getPlacering());
         holder.psAntal.setText("Spots: " + parkingSpots.get(position).getAntal() + "");
         holder.textPaid.setText(parkingSpots.get(position).getPaid());
         holder.textPrice.setText(parkingSpots.get(position).getPrice() + " /h");
-
-//        holder.saveAsFavorite.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                //save as favorite
-//            }
-//        });
     }
-
     @Override
     public int getItemCount() {
         return parkingSpots.size();
     }
-
     public interface OnListItemClickListener{
-
-
         void onListItemClick(int clickedItemIndex);
-
-
     }
 }

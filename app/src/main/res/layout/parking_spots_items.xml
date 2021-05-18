@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="wrap_content"
@@ -14,13 +15,14 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="left"
-        android:padding="20dp">
+        android:padding="20dp"
+        tools:ignore="RtlHardcoded">
 
         <TextView
             android:id="@+id/textStreetName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Street"
+            android:text="@string/street"
             android:textStyle="bold"
             android:textSize="18sp"
             android:layout_marginBottom="10dp"
@@ -33,20 +35,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="1dp"
-            android:text="Number of Spots"
-
+            android:text="@string/number_of_spots"
             android:textSize="18sp"
             android:layout_marginBottom="10dp"
             android:textColor="@color/black" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="400dp"
+        android:layout_width="376dp"
         android:layout_height="match_parent"
         android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:paddingTop="20dp"
-        android:paddingLeft="60dp">
+        android:paddingStart="60dp"
+        android:paddingTop="20dp">
 
         <TextView
             android:id="@+id/textPaid"
@@ -54,7 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:padding="1dp"
-            android:text="Paid/Not paid"
+            android:text="@string/paid_not_paid"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="italic" />
@@ -65,13 +66,13 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:padding="1dp"
-            android:text="Price"
+            android:text="@string/price"
             android:textColor="@color/black"
-            android:textSize="18sp"
-            />
+            android:textSize="18sp" />
     </LinearLayout>
+
     <LinearLayout
-        android:layout_width="360dp"
+        android:layout_width="320dp"
         android:layout_height="match_parent"
         android:gravity="right"
         android:orientation="vertical"
@@ -85,145 +86,8 @@
             android:layout_marginBottom="10dp"
             android:padding="1dp"
             android:src="@drawable/ic_heart"
-            android:text="Favorite"
+            android:text="@string/favorite"
             android:tooltipText="Save as favorite" />
 
     </LinearLayout>
-
-
-
-
 </androidx.cardview.widget.CardView>
-
-
-
-
-
-
-
-
-
-
-    <!--    <?xml version="1.0" encoding="utf-8"?>-->
-    <!--<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"-->
-    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
-    <!--xmlns:tools="http://schemas.android.com/tools"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:padding="20dp"-->
-    <!--app:cardCornerRadius="15dp"-->
-    <!--android:layout_marginBottom="20dp">-->
-
-    <!--<LinearLayout-->
-    <!--    android:layout_width="wrap_content"-->
-    <!--    android:layout_height="wrap_content"-->
-    <!--    android:orientation="vertical"-->
-    <!--    android:padding="20dp">-->
-
-    <!--    <TextView-->
-    <!--        android:id="@+id/profile_name"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginBottom="10sp"-->
-    <!--        android:fontFamily="@font/nunito_semibold"-->
-    <!--        android:text="Name"-->
-    <!--        android:textColor="@color/black" />-->
-
-    <!--    <LinearLayout-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginBottom="5dp">-->
-
-    <!--        <ImageView-->
-
-    <!--            android:layout_width="20dp"-->
-    <!--            android:layout_height="20dp"-->
-    <!--            android:layout_marginRight="8dp"-->
-    <!--            android:src="@drawable/co2" />-->
-
-    <!--        <TextView-->
-    <!--            android:id="@+id/measurement_carbon"-->
-    <!--            android:layout_width="wrap_content"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:fontFamily="@font/nunito_semibold"-->
-    <!--            android:text="N/A"-->
-    <!--            android:textColor="@color/black" />-->
-
-    <!--    </LinearLayout>-->
-
-    <!--    <LinearLayout-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginBottom="5dp">-->
-
-    <!--        <ImageView-->
-    <!--            android:layout_width="20dp"-->
-    <!--            android:layout_height="20dp"-->
-
-    <!--            android:layout_marginRight="8dp"-->
-    <!--            android:src="@drawable/drop" />-->
-
-    <!--        <TextView-->
-    <!--            android:id="@+id/measurement_temperature"-->
-    <!--            android:layout_width="wrap_content"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:fontFamily="@font/nunito_semibold"-->
-    <!--            android:text="N/A"-->
-    <!--            android:textColor="@color/black" />-->
-
-    <!--    </LinearLayout>-->
-
-    <!--    <LinearLayout-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginBottom="5dp">-->
-
-    <!--        <ImageView-->
-    <!--            android:layout_width="20dp"-->
-    <!--            android:layout_height="20dp"-->
-    <!--            android:layout_marginRight="8dp"-->
-    <!--            android:src="@drawable/ic_thermostat" />-->
-
-    <!--        <TextView-->
-    <!--            android:id="@+id/measurement_humidity"-->
-    <!--            android:layout_width="wrap_content"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:fontFamily="@font/nunito_semibold"-->
-    <!--            android:text="N/A"-->
-    <!--            android:textColor="@color/black" />-->
-
-    <!--    </LinearLayout>-->
-
-    <!--</LinearLayout>-->
-
-    <!--<LinearLayout-->
-    <!--    android:layout_width="wrap_content"-->
-    <!--    android:layout_height="match_parent"-->
-    <!--    android:orientation="vertical"-->
-    <!--    android:layout_gravity="end"-->
-    <!--    android:gravity="center"-->
-    <!--    android:layout_marginTop="25sp"-->
-    <!--    android:paddingEnd="10dp"-->
-    <!--    >-->
-
-    <!--    <Button-->
-    <!--        android:id="@+id/EditBtn"-->
-    <!--        android:layout_width="98dp"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:backgroundTint="@color/primary_green"-->
-    <!--        android:fontFamily="@font/nunito_semibold"-->
-    <!--        android:text="Edit" />-->
-
-    <!--    <Button-->
-    <!--        android:id="@+id/RemoveBtn"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:text="Remove"-->
-    <!--        android:fontFamily="@font/nunito_semibold"-->
-    <!--        android:backgroundTint="@color/red"/>-->
-
-
-    <!--</LinearLayout>-->
-
-
-    <!--</androidx.cardview.widget.CardView>-->

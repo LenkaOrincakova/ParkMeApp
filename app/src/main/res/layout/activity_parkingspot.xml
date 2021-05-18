@@ -30,32 +30,31 @@
 
     <CheckBox
         android:id="@+id/checkboxFree"
-        android:layout_width="87dp"
-        android:layout_height="32dp"
+        android:layout_width="124dp"
+        android:layout_height="31dp"
         android:layout_below="@+id/textParkingSpots"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="26dp"
-        android:layout_marginLeft="15dp"
-        android:checked="true"
-        android:textColor="@color/white"
         android:layout_marginTop="5dp"
-        android:layout_marginEnd="298dp"
-        android:text="Free" />
+        android:layout_marginEnd="261dp"
+        android:checked="true"
+        android:text="@string/free"
+        android:textColor="@color/white" />
 
     <CheckBox
         android:id="@+id/checkboxPaid"
-        android:layout_width="115dp"
-        android:layout_height="30dp"
-        android:textColor="@color/white"
-        android:checked="true"
+        android:layout_width="126dp"
+        android:layout_height="31dp"
         android:layout_below="@+id/textParkingSpots"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="116dp"
+        android:layout_marginStart="145dp"
         android:layout_marginTop="5dp"
-        android:layout_marginEnd="180dp"
-        android:text="Paid" />
+        android:layout_marginEnd="140dp"
+        android:checked="true"
+        android:text="@string/paid"
+        android:textColor="@color/white" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/parkingSpotsRecycleView"
@@ -67,135 +66,5 @@
         android:scrollbars="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textParkingSpots" />
-    <!--    <TextView-->
-<!--        android:id="@+id/psPlacering"-->
-<!--        android:layout_width="239dp"-->
-<!--        android:layout_marginTop="150dp"-->
-<!--        android:layout_height="53dp"-->
-<!--        android:layout_weight="3"-->
-<!--        android:fontFamily="@font/quicksand"-->
-<!--        android:textAlignment="center"-->
-<!--        android:textColor="@color/black"-->
-<!--        android:textSize="18sp"-->
-<!--        android:textStyle="bold" />-->
 
-<!--    <TextView-->
-<!--        android:id="@+id/psAntal"-->
-<!--        android:layout_weight="3"-->
-
-<!--        android:layout_width="239dp"-->
-<!--        android:layout_height="53dp"-->
-<!--        android:fontFamily="@font/quicksand"-->
-<!--        android:textAlignment="center"-->
-<!--        android:textColor="@color/black"-->
-<!--        android:textSize="12sp"-->
-<!--        />-->
-
-            </RelativeLayout>
-
-<!--        <androidx.cardview.widget.CardView-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="0dp"-->
-<!--            android:layout_columnWeight="1"-->
-<!--            android:layout_marginBottom="16dp"-->
-<!--            android:layout_marginLeft="16dp"-->
-<!--            android:layout_marginRight="16dp"-->
-<!--            android:layout_rowWeight="1"-->
-<!--            app:cardElevation="8dp"-->
-<!--            app:cardCornerRadius="8dp">-->
-
-<!--            <LinearLayout-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_gravity="center_horizontal|center_vertical"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_margin="16dp"-->
-<!--                android:orientation="vertical">-->
-
-
-<!--                <TextView-->
-<!--                    android:text="Opel"-->
-<!--                    android:textColor="@color/black"-->
-<!--                    android:textSize="18sp"-->
-<!--                    android:fontFamily="@font/quicksand"-->
-<!--                    android:textStyle="bold"-->
-<!--                    android:layout_marginLeft="30dp"-->
-<!--                    android:textAlignment="center"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"/>-->
-
-
-<!--            </LinearLayout>-->
-
-<!--        </androidx.cardview.widget.CardView>-->
-<!--<androidx.cardview.widget.CardView-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="0dp"-->
-<!--            android:layout_columnWeight="1"-->
-<!--            android:layout_marginBottom="16dp"-->
-<!--            android:layout_marginLeft="16dp"-->
-<!--            android:layout_marginRight="16dp"-->
-<!--            android:layout_rowWeight="1"-->
-<!--            app:cardElevation="8dp"-->
-<!--            app:cardCornerRadius="8dp">-->
-
-<!--            <LinearLayout-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_gravity="center_horizontal|center_vertical"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_margin="16dp"-->
-<!--                android:orientation="vertical">-->
-
-
-<!--                <TextView-->
-<!--                    android:text="Skoda"-->
-<!--                    android:textColor="@color/black"-->
-<!--                    android:textSize="18sp"-->
-<!--                    android:layout_marginLeft="30dp"-->
-<!--                    android:fontFamily="@font/quicksand"-->
-<!--                    android:textStyle="bold"-->
-<!--                    android:textAlignment="center"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"/>-->
-
-
-<!--            </LinearLayout>-->
-
-<!--        </androidx.cardview.widget.CardView>-->
-<!--        &lt;!&ndash;        column2&ndash;&gt;-->
-<!--        <androidx.cardview.widget.CardView-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="0dp"-->
-<!--            android:layout_columnWeight="1"-->
-<!--            android:layout_marginBottom="16dp"-->
-<!--            android:layout_marginLeft="16dp"-->
-<!--            android:layout_marginRight="16dp"-->
-<!--            android:layout_rowWeight="1"-->
-<!--            app:cardElevation="8dp"-->
-<!--            app:cardCornerRadius="8dp">-->
-
-<!--            <LinearLayout-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_gravity="center_horizontal|center_vertical"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_margin="16dp"-->
-<!--                android:orientation="vertical">-->
-<!--                -->
-
-<!--                <TextView-->
-<!--                    android:text="Kia"-->
-<!--                    android:textColor="@color/black"-->
-<!--                    android:textSize="18sp"-->
-<!--                    android:fontFamily="@font/quicksand"-->
-<!--                    android:textStyle="bold"-->
-<!--                    android:layout_marginLeft="30dp"-->
-<!--                    android:textAlignment="center"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"/>-->
-
-
-<!--            </LinearLayout>-->
-
-<!--        </androidx.cardview.widget.CardView>-->
-
-
-
+</RelativeLayout>

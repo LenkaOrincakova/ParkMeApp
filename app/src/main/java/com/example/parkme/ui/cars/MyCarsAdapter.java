@@ -31,15 +31,12 @@ public class MyCarsAdapter extends RecyclerView.Adapter<MyCarsAdapter.CarViewHol
             textCarName = itemView.findViewById(R.id.textCarName);
             textCarType = itemView.findViewById(R.id.textCarType);
         }
-
         @Override
         public void onClick(View v) {
             listener.onListItemClick(getAdapterPosition());
             listener.deleteCar(carsList.get(getAdapterPosition()), getAdapterPosition());
-                    }
+       }
     }
-
-
     //Constructor
     public MyCarsAdapter(ArrayList<Car> cars, OnListItemClickListener listener)
     {
@@ -52,7 +49,6 @@ public class MyCarsAdapter extends RecyclerView.Adapter<MyCarsAdapter.CarViewHol
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_items, parent, false);
         CarViewHolder evh = new CarViewHolder(view);
         return evh;
-//        return new CarHolder(view);
     }
 
     @Override
@@ -68,12 +64,10 @@ public class MyCarsAdapter extends RecyclerView.Adapter<MyCarsAdapter.CarViewHol
             }
         });
     }
-
     @Override
     public int getItemCount() {
         return carsList.size();
     }
-
     public interface OnListItemClickListener{
         void onListItemClick(int clickedItemIndex);
         void deleteCar(Car car, int position);

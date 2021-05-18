@@ -13,7 +13,6 @@ import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.parkme.AddingNewCarFragment;
 import com.example.parkme.R;
 import com.example.parkme.model.Car;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -25,7 +24,6 @@ import java.util.List;
 public class MyCarsFragment extends Fragment implements MyCarsAdapter.OnListItemClickListener {
 
     FragmentTransaction transaction;
-
     private RecyclerView.LayoutManager layoutManager;
     private RecyclerView recyclerView;
     private MyCarsAdapter adapter;
@@ -40,19 +38,14 @@ public class MyCarsFragment extends Fragment implements MyCarsAdapter.OnListItem
         viewModel = new ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory.getInstance(getActivity().getApplication())).get(MyCarsViewModel.class);
         View root = inflater.inflate(R.layout.activity_mycars, container, false);
 
-
-
-
         fab = root.findViewById(R.id.fabCars);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                AddingNewCarFragment dialog = new AddingNewCarFragment();
-//                dialog.show(getChildFragmentManager(), "Fragment");
                 Navigation.findNavController(root).navigate(R.id.navigateToCarsFragment);
-
             }
         });
+
         carsList = new ArrayList<>();
         recyclerView = root.findViewById(R.id.carsRecycleView);
         recyclerView.setHasFixedSize(true);
@@ -68,9 +61,6 @@ public class MyCarsFragment extends Fragment implements MyCarsAdapter.OnListItem
             carsList.addAll(cars);
             adapter.notifyDataSetChanged();
         });
-
-
-//        initializeCardView();
         return root;
     }
     @Override
@@ -91,17 +81,4 @@ public class MyCarsFragment extends Fragment implements MyCarsAdapter.OnListItem
         adapter.notifyItemRangeChanged(position,adapter.getItemCount());
         adapter.notifyDataSetChanged();
     }
-
-//        private void initializeCardView() {
-//        carsList = new ArrayList<>();
-//        adapter = new MyCarsAdapter(getActivity(), carsList);
-//        createDataForCards();
-//    }
-
-//    private void createDataForCards() {
-//        Car car = new Car("Mazda", "Sport");
-//        carsList.add(car);
-//        adapter.notifyDataSetChanged();
-//
-//    }
 }

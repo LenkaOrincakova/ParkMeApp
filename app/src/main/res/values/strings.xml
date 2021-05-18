@@ -41,10 +41,37 @@
     <string name="payment">Payment</string>
     <string name="search">Search</string>
     <string name="ParkingSpots">Parking Spots</string>
-    
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="enteremailagain">Enter email again</string>
     <string name="enterpasswordagain">Enter password again</string>
     <string name="title_MyCars">myCars</string>
+    <string name="favorites">Favorites</string>
+
+    <string name="welcome">WELCOME!</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="park_me">Park Me</string>
+    <string name="quick_and_fast_parking_nearby_your_location">Quick and fast parking nearby your location!</string>
+    <string name="explore_available_parking_spots_in_horsens">Explore available parking spots in Horsens.</string>
+    <string name="free">Free</string>
+    <string name="paid">Paid</string>
     <string name="submit">Submit</string>
+    <string name="cancel">Cancel</string>
+    <string name="type">Type</string>
+    <string name="name">Name</string>
+    <string name="add_new_car">Add new car</string>
+    <string name="click_to_see_the_whole_list_of_streets_in">Click to see the whole list of streets in</string>
+    <string name="horsens">Horsens</string>
+    <string name="add_profile_info">Add profile info</string>
+    <string name="street">Street</string>
+    <string name="number_of_spots">Number of Spots</string>
+    <string name="paid_not_paid">Paid/Not paid</string>
+    <string name="price">Price</string>
+    <string name="favorite">Favorite</string>
+    <string name="email">Email</string>
+    <string name="signup">Sign up</string>
+    <string name="remove">REMOVE</string>
 </resources>

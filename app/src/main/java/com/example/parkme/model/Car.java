@@ -18,7 +18,6 @@ public class Car implements Serializable {
         this.name = name;
         this.type=type;
     }
-
     public int getId()
     {
         return id;

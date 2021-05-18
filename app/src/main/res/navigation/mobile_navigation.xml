@@ -32,7 +32,7 @@
 
     <fragment
         android:id="@+id/fragmentAddMyCars"
-        android:name="com.example.parkme.AddingNewCarFragment"
+        android:name="com.example.parkme.ui.addingCars.AddingNewCarFragment"
         android:label="Add a car"
         tools:layout="@layout/fragment_adding_new_car" >
         <action
