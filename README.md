@@ -36,35 +36,3 @@ Searching for a parking spot is usually a huge issue especially in the centres a
 |Any needed information about the car (plates)| :heavy_check_mark: |
 
 
-
-
-### Must have
-•	Register new account
-
-•	Login user
-
-•	Search/adjust location 
-
-• Price if the parking place is paid
-
-•	Add cars to database
-
-•	See parking spots in Horsens
-### Should have
-•		Filter paid/free parking places
-
-•   Save the parking place as a favourite
-
-### Could have
-•	Pin my car to a parking spot
-
-•	Subscription if registered user(discounts, memberships, cards)
-
-
-
-### Won't have
-•	See other cars
-
-•	Any fixes if the cars are parked wrong (not in the lines)
-
-•	Any needed information about the car (plates)
