@@ -58,7 +58,6 @@ public class RegisterActivity extends AppCompatActivity {
         });
         signUpBtn = findViewById(R.id.buttonSignUp);
         signUpBtn.setOnClickListener(v-> {
-
                 String emailText = email.getText().toString().trim();
                 String passwordText = password.getText().toString().trim();
                 String confirmPasswordText = confirmPassword.toString().trim();
@@ -79,7 +78,7 @@ public class RegisterActivity extends AppCompatActivity {
                 }
 
                 if (passwordText.equalsIgnoreCase(confirmPasswordText)) {
-                    confirmPassword.setError("Passwords do not match");
+                    confirmPassword.setError("Passwords dont match");
                     return;
                 }
                 registerViewModel.register(emailText, passwordText);

@@ -26,14 +26,15 @@
         android:textStyle="italic" />
 
     <androidx.cardview.widget.CardView
-        android:layout_width="140dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="140dp"
+        android:layout_width="274dp"
+        android:layout_height="51dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="137dp"
         android:layout_marginTop="490dp"
-        android:layout_marginEnd="35dp"
         android:clickable="true"
+        android:layout_marginEnd="137dp"
         android:focusable="true"
-        android:paddingEnd="30dp"
         app:cardCornerRadius="8dp">
 
         <LinearLayout

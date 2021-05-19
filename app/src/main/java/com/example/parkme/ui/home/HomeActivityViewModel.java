@@ -13,25 +13,32 @@ public class HomeActivityViewModel  extends AndroidViewModel {
     private  UserRepository userRepository;
     private MutableLiveData<FirebaseUser> userData;
     private MutableLiveData<Boolean> logoutData;
+
+
+
     public HomeActivityViewModel(@NonNull Application application) {
         super(application);
         userRepository = UserRepository.getInstance(application);
         this.userData = userRepository.getUserData();
         this.logoutData = userRepository.getLoggedOutData();
     }
+
     public void signOut()
     {
         userRepository.signOut();
 
     }
+
     public MutableLiveData<Boolean> getLogoutData()
     {
         return logoutData;
     }
+
     public MutableLiveData<FirebaseUser> getUserData()
     {
         return userData;
     }
+
 }
 
 

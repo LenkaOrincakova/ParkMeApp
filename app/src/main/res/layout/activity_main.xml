@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/carImage"
-        android:layout_width="341dp"
-        android:layout_height="352dp"
+        android:layout_width="330dp"
+        android:layout_height="250dp"
         android:layout_marginTop="228dp"
         android:src="@drawable/bluecar2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,6 +39,7 @@
         android:layout_marginTop="72dp"
         android:fontFamily="@font/quicksand_medium"
         android:shadowColor="#FFFFFF"
+        android:gravity="center"
         android:text="@string/quick_and_fast_parking_nearby_your_location"
         android:textColor="#FFFFFF"
         android:textColorHighlight="#80D8FF"

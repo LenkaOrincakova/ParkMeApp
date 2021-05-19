@@ -44,14 +44,12 @@ public class LoginActivity extends AppCompatActivity {
                     email.setError(Integer.toString(R.string.enteremailagain));
                     return;
                 }
-
                 if (TextUtils.isEmpty(passwordText)) {
                     password.setError(Integer.toString(R.string.enterpasswordagain));
                     return;
                 }
                 viewModel.login(emailText, passwordText);
-                startActivity(new Intent(this, HomeActivity.class));
-            }
+                startActivity(new Intent(this, HomeActivity.class));            }
         );
     }
     @Override
