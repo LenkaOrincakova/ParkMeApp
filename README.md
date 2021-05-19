@@ -35,4 +35,4 @@ Searching for a parking spot is usually a huge issue especially in the centres a
 | Any fixes if the cars are parked wrong (not in the lines)| :heavy_check_mark: |
 |Any needed information about the car (plates)| :heavy_check_mark: |
 
-
+VIDEO DEMONSTRATION LINK : https://youtu.be/_hfktmHColA
